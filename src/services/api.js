@@ -1,5 +1,5 @@
 // Frontend/src/services/api.js
-const API_URL = "https://user-management-backend-3-bwyb.onrender.com/users";
+const API_URL = "https://user-management-backend-4-o0zo.onrender.com";
 
 // Fetch all users
 export const getUsers = () =>
@@ -27,4 +27,3 @@ export const deleteUser = (id) =>
     method: "DELETE",
   }).then((res) => res.json());
 
-  
