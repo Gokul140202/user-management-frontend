@@ -1,39 +1,30 @@
-const API_URL = "http://localhost:5000/users";
+// Frontend/src/services/api.js
+const API_URL = "https://user-management-backend-3-bwyb.onrender.com/users";
 
-// GET all users
-export const getUsers = async () => {
-  const res = await fetch(API_URL);
-  if (!res.ok) throw new Error("Failed to fetch users");
-  return res.json();
-};
+// Fetch all users
+export const getUsers = () =>
+  fetch(API_URL).then((res) => res.json());
 
-// POST new user
-export const addUser = async (user) => {
-  const res = await fetch(API_URL, {
+// Add a new user
+export const addUser = (user) =>
+  fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(user),
-  });
-  if (!res.ok) throw new Error("Failed to add user");
-  return res.json();
-};
+  }).then((res) => res.json());
 
-// PUT update user
-export const updateUser = async (id, user) => {
-  const res = await fetch(`${API_URL}/${id}`, {
+// Update a user
+export const updateUser = (id, user) =>
+  fetch(`${API_URL}/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(user),
-  });
-  if (!res.ok) throw new Error("Failed to update user");
-  return res.json();
-};
+  }).then((res) => res.json());
 
-// DELETE user
-export const deleteUser = async (id) => {
-  const res = await fetch(`${API_URL}/${id}`, {
+// Delete a user
+export const deleteUser = (id) =>
+  fetch(`${API_URL}/${id}`, {
     method: "DELETE",
-  });
-  if (!res.ok) throw new Error("Failed to delete user");
-  return res.json();
-};
+  }).then((res) => res.json());
+
+  
