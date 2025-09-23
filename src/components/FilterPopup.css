@@ -1,0 +1,55 @@
+.filter-container {
+  margin: 10px 0;
+}
+
+.filter-toggle-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-toggle-btn:hover {
+  background-color: #2980b9;
+}
+
+.filter-popup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #f1f2f6;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  margin-top: 5px;
+}
+
+.filter-popup p {
+  width: 100%;
+  font-weight: 500;
+}
+
+.filter-input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.apply-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2766ae;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #2766ae;
+}
